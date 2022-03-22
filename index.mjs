@@ -34,7 +34,7 @@ else{
 let ctc = null;
 if (isAlice){
     ctc = acc.contract(backend);
-    ctc.getInfo().then((info)=>{
+    ctc.getContractAddress().then((info)=>{
         console.log(`The contract is deployed as = ${JSON.stringify(info)}`); 
     });
 
