@@ -3,3 +3,6 @@ reach
 .vscode/settings.json
 .DS_Store
 Dockerfile
+/.idea/
+.DS_Store
+.DS_Store

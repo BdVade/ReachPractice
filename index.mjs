@@ -14,7 +14,7 @@ console.log(`Starting Rock Paper Scissors as ${who}`);
 
 let acc = null;
 const createAcc = await ask.ask(
-    `Would you like to create an Acccount? (only possible on devnet)`,
+    `Would you like to create an Account? (only possible on devnet)`,
     ask.yesno
 );
 
@@ -34,7 +34,7 @@ else{
 let ctc = null;
 if (isAlice){
     ctc = acc.contract(backend);
-    ctc.getContractAddress().then((info)=>{
+    ctc.getInfo().then((info)=>{
         console.log(`The contract is deployed as = ${JSON.stringify(info)}`); 
     });
 
@@ -86,7 +86,7 @@ const HANDS = {
     'Scissors': 2, 'S': 2, 's': 2,
   };
 
-  interact.getHand = async () =>{
+interact.getHand = async () =>{
       const hand = await ask.ask(
           `What hand will you play`,
           (x)=>{
